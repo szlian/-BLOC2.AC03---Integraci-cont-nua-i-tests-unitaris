@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'zulu' # Alternative distribution options are available.
+          distribution: 'zulu'
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
         with:
@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"szlian_-BLOC2.AC03---Integraci-cont-nua-i-tests-unitaris" /o:"szlian" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-          dotnet build Bloc2AC3\Bloc2AC3.sln
+          dotnet build Bloc2AC3.sln
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
