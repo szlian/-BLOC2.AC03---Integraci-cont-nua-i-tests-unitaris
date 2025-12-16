@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"szlian_-BLOC2.AC03---Integraci-cont-nua-i-tests-unitaris" /o:"szlian" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-          dotnet build Bloc2AC3\Bloc2AC3.sln
+          dotnet build Bloc2AC3.sln
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
