@@ -10,7 +10,7 @@ namespace CodeWithIssues
             const string MsgWelcome = "Benvingut al programa de càlculs!";
             const string MsgEnd = "Finalitzant el programa...";
 
-
+            //fhjdfgh
             Console.WriteLine(MsgWelcome);
 
             int numOne = 5;
